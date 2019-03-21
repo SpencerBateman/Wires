@@ -1,0 +1,5 @@
+{
+  "version": 2,
+  "name": "wires",
+  "builds": [{ "src": "next.config.js", "use": "@now/next" }]
+}
