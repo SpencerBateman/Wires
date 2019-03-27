@@ -51,7 +51,6 @@ class Occilator extends React.Component {
       <Fader label="Gain" GridColumn="3" min={-60} max={0} default={-10} units="dB" />
     </Frame>
         <button onClick={this.playSound}>Play!</button>
-
   </div>
     );
   }
