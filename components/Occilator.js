@@ -11,7 +11,7 @@ class Occilator extends React.Component {
     this.state = {
       waveform: WAVEFORMS.SINE.id,
       frequency : 440,
-      duration : 500
+      duration : 100
     }
 
     this.handleChange = this.handleChange.bind(this)
@@ -39,31 +39,59 @@ class Occilator extends React.Component {
     oscillator.connect(audioContext.destination);
 
     oscillator.start();
-    window.setTimeout(oscillator.stop.bind(oscillator), this.state.duration)
+    window.setTimeout(oscillator.stop.bind(oscillator), this.state.duration);
   }
 
   render() {
     return(
       <div>
-    <Frame>
-      <Fader label="Pitch" GridColumn="1" min={250} max={4000} default={440} units="Hz" updateFrequency={this.updateFrequency}/>
-      <WaveSelector GridColumn="2" handleChange={this.handleChange} />
-      <Fader label="Gain" GridColumn="3" min={-60} max={0} default={-10} units="dB" />
-    </Frame>
+        <Frame>
+          <SynthName>Occ 1.0</SynthName>
+          <Fader
+            label="Pitch"
+            GridColumn={1}
+            min={250}
+            max={4000}
+            default={440}
+            units="Hz"
+            updateFrequency={this.updateFrequency}
+          />
+          <WaveSelector
+            GridColumn={2}
+            handleChange={this.handleChange}
+          />
+          <Fader
+            label="Gain"
+            GridColumn={3}
+            min={-60}
+            max={0}
+            default={-10}
+            units="dB"
+          />
+        </Frame>
         <button onClick={this.playSound}>Play!</button>
-  </div>
+      </div>
     );
   }
 }
 
+const SynthName = styled.div`
+font-size: 20px;
+grid-row: 1;
+grid-column: 1;
+font-family: 'Work Sans',sans-serif;
+text-transform: Uppercase;
+    margin: 0 0 0 20px;
+`
+
 const Frame = styled.div`
-  border-radius: 10px;
-  border: 3px solid black;
-  display: Grid;
-  grid-template-columns: 200px 200px 200px;
-  grid-template-rows: 250px;
-  align-items: center;
-  background: #fcfcfc;
+border-radius: 10px;
+border: 3px solid black;
+display: Grid;
+grid-template-columns: 200px 200px 200px;
+grid-template-rows: 50px 250px;
+align-items: center;
+background: #fcfcfc;
 `
 
 export default Occilator;

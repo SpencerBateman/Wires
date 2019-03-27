@@ -12,9 +12,6 @@ Synth needs to manage displaying direction of signal flow and order of modules.
 # Modules
 
 Module that can accept a rhythm pattern
-
-| Synthesizer                           |
-| ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
+* Occilator
+* Filter
+* EQ

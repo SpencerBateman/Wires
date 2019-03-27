@@ -20,7 +20,7 @@ class WaveSelector extends React.Component {
 
   render() {
     return(
-      <div>
+      <Container>
         <WaveTitle>{this.state.wave}</WaveTitle>
       <ButtonContainer>
         <WaveButton
@@ -44,7 +44,7 @@ class WaveSelector extends React.Component {
           dangerouslySetInnerHTML={{__html: "Triangle"}}
         />
       </ButtonContainer>
-    </div>
+    </Container>
     );
   }
 }
@@ -52,6 +52,10 @@ class WaveSelector extends React.Component {
 const WaveTitle = styled.div`
   text-align: center;
   font-family: 'Work Sans', sans-serif;
+`
+
+const Container = styled.div`
+  grid-row: 2;
 `
 
 const ButtonContainer = styled.div`

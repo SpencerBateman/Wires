@@ -119,7 +119,6 @@ class Fader extends React.Component {
     })
   }
 
-
   render() {
     let value = this.state.value
     let min = this.state.min
@@ -139,19 +138,18 @@ class Fader extends React.Component {
           max={max}
           tooltip={false}
         />
-
       </Container>
     );
   }
 }
 
 const Container = styled.div`
-grid-column: ${props => props.GridColumn}
+  grid-row: 2;
 `
 
 const Label = styled.p`
-font-family: 'Work Sans', sans-serif;
-text-align: center;
+  font-family: 'Work Sans', sans-serif;
+  text-align: center;
 `
 
 const Touch = styled.div`
