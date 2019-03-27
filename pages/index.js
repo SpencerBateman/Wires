@@ -2,14 +2,14 @@ import React from 'react';
 import styled from 'styled-components';
 import { Reset } from 'styled-reset';
 
-import Occilator from './../components/Occilator';
+import Synthesizer from './../components/Synthesizer/Synthesizer'
 
 class Home extends React.Component {
   render() {
     return(
       <Container>
         <Reset />
-        <Occilator />
+        <Synthesizer />
       </Container>
     );
   }

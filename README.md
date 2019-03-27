@@ -9,14 +9,9 @@ audio playback and connecting to the window, audio context etc.
 Should Synthesizer take care of grid? Yes but it imports the manager perhanps.
 Synth needs to manage displaying direction of signal flow and order of modules.
 
-## Terminology
-### Module
-Examples of modules
-* Occilator
-* Filter
-
 # Modules
 * Occilator
+* Amp
 * Filter
 * EQ
 
@@ -24,10 +19,18 @@ Examples of modules
 wires/
 ├── components/
 │   ├── Modules/
+│   │   ├── Oscillator
+│   │   ├── Filter
+│   │   ├── EQ
+│   │   └── Amp
+│   ├── Synthesizer/
+│   │   ├── Synthesizer
+│   │   └── WAVEFORMS
 │   └── UI/
-│       └── Fader/
+│       ├── Fader
+│       └── WaveSelector
 ├── pages/
 ├── next.config.js
-└── now.json
-
+├── now.json
+└── package.json
 ```

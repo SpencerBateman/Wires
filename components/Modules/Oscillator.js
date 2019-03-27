@@ -1,11 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import Fader from './Fader';
-import WaveSelector from './WaveSelector';
-import WAVEFORMS from  './WAVEFORMS.js';
+import Fader from './../UI/Fader';
+import WaveSelector from './../UI/WaveSelector';
+import WAVEFORMS from  './../Synthesizer/WAVEFORMS.js';
 
-class Occilator extends React.Component {
+class Oscillator extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -16,30 +16,18 @@ class Occilator extends React.Component {
 
     this.handleChange = this.handleChange.bind(this)
     this.updateFrequency = this.updateFrequency.bind(this)
-    this.playSound = this.playSound.bind(this)
   }
 
-  componentDidMount() {
-    window.audioContext = window.audioContext || new AudioContext();
-  }
-
-  handleChange(e) {
-    this.setState({waveform: e});
+  handleChange = (e) => {
+    this.setState({
+      waveform: e
+  }, () => {
+    this.props.update(this.state)
+  })
   }
 
   updateFrequency(e) {
     this.setState({frequency: e});
-  }
-
-  playSound() {
-    let oscillator = audioContext.createOscillator();
-    oscillator.type = this.state.waveform;
-    oscillator.frequency.value = this.state.frequency;
-
-    oscillator.connect(audioContext.destination);
-
-    oscillator.start();
-    window.setTimeout(oscillator.stop.bind(oscillator), this.state.duration);
   }
 
   render() {
@@ -69,7 +57,6 @@ class Occilator extends React.Component {
             units="dB"
           />
         </Frame>
-        <button onClick={this.playSound}>Play!</button>
       </div>
     );
   }
@@ -94,4 +81,4 @@ align-items: center;
 background: #fcfcfc;
 `
 
-export default Occilator;
+export default Oscillator;
