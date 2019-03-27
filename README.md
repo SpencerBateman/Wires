@@ -15,3 +15,13 @@ Module that can accept a rhythm pattern
 * Occilator
 * Filter
 * EQ
+
+
+```
+componets/ 
+  |
+  |--UI/
+  |
+  |--Module/
+
+```
