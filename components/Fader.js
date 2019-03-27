@@ -114,7 +114,9 @@ class Fader extends React.Component {
   handleOnChange = (value) => {
     this.setState({
       value: value
-    });
+    }, () => {
+      this.props.updateFrequency(this.state.value)
+    })
   }
 
 

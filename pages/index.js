@@ -1,9 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import {Reset} from 'styled-reset';
+import { Reset } from 'styled-reset';
 
-import Occilator from './../components/Occilator.js';
-
+import Occilator from './../components/Occilator';
 
 class Home extends React.Component {
   render() {
@@ -21,7 +20,6 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   height:100vh;
-
 `
 
 export default Home

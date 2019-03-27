@@ -2183,6 +2183,11 @@ get-value@^2.0.3, get-value@^2.0.6:
   resolved "https://registry.yarnpkg.com/get-value/-/get-value-2.0.6.tgz#dc15ca1c672387ca76bd37ac0a395ba2042a2c28"
   integrity sha1-3BXKHGcjh8p2vTesCjlbogQqLCg=
 
+gibberish@^0.1.2:
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/gibberish/-/gibberish-0.1.2.tgz#84f9fbd2f0a8955cac07154a653e842bd0694708"
+  integrity sha1-hPn70vColVysBxVKZT6EK9BpRwg=
+
 glob-parent@^3.1.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/glob-parent/-/glob-parent-3.1.0.tgz#9e6af6299d8d3bd2bd40430832bd113df906c5ae"

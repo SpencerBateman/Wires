@@ -5,16 +5,17 @@ class WaveSelector extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      wave: "Sine"
+      wave: "sine"
     }
     this.handlerChange = this.handlerChange.bind(this)
   }
 
-  handlerChange(wave) {
-    console.log(wave)
+  handlerChange = (wave) => {
     this.setState({
       wave: wave
-    })
+  }, () => {
+    this.props.handleChange(this.state.wave)
+  })
   }
 
   render() {
@@ -23,23 +24,23 @@ class WaveSelector extends React.Component {
         <WaveTitle>{this.state.wave}</WaveTitle>
       <ButtonContainer>
         <WaveButton
-          selected={this.state.wave == "Sine"}
-          onClick={() => this.handlerChange("Sine")}
+          selected={this.state.wave == "sine"}
+          onClick={() => this.handlerChange("sine")}
           dangerouslySetInnerHTML={{__html: "Sine"}}
         />
         <WaveButton
-          selected={this.state.wave == "Saw"}
-          onClick={() => this.handlerChange("Saw")}
+          selected={this.state.wave == "sawtooth"}
+          onClick={() => this.handlerChange("sawtooth")}
           dangerouslySetInnerHTML={{__html: "Saw"}}
         />
         <WaveButton
-          selected={this.state.wave == "Square"}
-          onClick={() => this.handlerChange("Square")}
+          selected={this.state.wave == "square"}
+          onClick={() => this.handlerChange("square")}
           dangerouslySetInnerHTML={{__html: "Square"}}
         />
         <WaveButton
-          selected={this.state.wave == "Triangle"}
-          onClick={() => this.handlerChange("Triangle")}
+          selected={this.state.wave == "triangle"}
+          onClick={() => this.handlerChange("triangle")}
           dangerouslySetInnerHTML={{__html: "Triangle"}}
         />
       </ButtonContainer>
