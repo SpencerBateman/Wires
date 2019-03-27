@@ -18,10 +18,10 @@ Module that can accept a rhythm pattern
 
 
 ```
-componets/ 
-  |
-  |--UI/
-  |
-  |--Module/
+wires/
+├── components/
+├── pages/
+├── next.config.js
+└── now.json
 
 ```
