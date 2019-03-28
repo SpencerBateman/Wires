@@ -1,5 +1,5 @@
 # Wires
-Wires is a project that explores digital signal processing.
+Wires is a project that explores digital signal processing in the browser.
 
 
 # Project Architecure
@@ -9,12 +9,7 @@ audio playback and connecting to the window, audio context etc.
 Should Synthesizer take care of grid? Yes but it imports the manager perhanps.
 Synth needs to manage displaying direction of signal flow and order of modules.
 
-# Modules
-* Occilator
-* Amp
-* Filter
-* EQ
-
+## Directory Structure
 ```
 wires/
 ├── components/
@@ -28,6 +23,8 @@ wires/
 │       ├── Fader
 │       ├── OnSwitch
 │       └── WaveSelector
+├── data/
+│   └── config.json
 ├── pages/
 │   ├── index
 │   └── _document
@@ -37,6 +34,20 @@ wires/
 ├── README.md
 └── yarn.lock
 ```
+### components/
+### data/
+### pages/
+### next.config.js
+### now.json
+### package.json/
+### README.md
+### yarn.lock
+
+# Modules
+* Occilator
+* Amp
+* Filter
+* EQ
 
 # Deployment
 Deploy in an instant with Now by running ```now``` in terminal.
