@@ -19,20 +19,23 @@ Synth needs to manage displaying direction of signal flow and order of modules.
 wires/
 ├── components/
 │   ├── Modules/
-│   │   ├── Oscillator
-│   │   ├── Filter
-│   │   ├── EQ
-│   │   └── Amp
+│   │   ├── Amp
+│   │   └── Oscillator
 │   ├── Synthesizer/
 │   │   ├── Synthesizer
 │   │   └── WAVEFORMS
 │   └── UI/
 │       ├── Fader
+│       ├── OnSwitch
 │       └── WaveSelector
 ├── pages/
+│   ├── index
+│   └── _document
 ├── next.config.js
 ├── now.json
-└── package.json
+├── package.json
+├── README.md
+└── yarn.lock
 ```
 
 # Deployment
