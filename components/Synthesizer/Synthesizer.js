@@ -26,16 +26,15 @@ class Synthesizer extends React.Component {
   }
 
   playSound(buffer, time) {
-    let oscillator = audioContext.createOscillator();
-    oscillator.type = this.state.waveform;
-    oscillator.frequency.value = this.state.frequency;
-    oscillator.connect(audioContext.destination);
-    let now = audioContext.currentTime;
-    if (this.state.ON) {
+    window.setInterval(() => {
+      let oscillator = audioContext.createOscillator();
+      oscillator.type = this.state.waveform;
+      oscillator.frequency.value = this.state.frequency;
+      oscillator.connect(audioContext.destination);
+      let now = audioContext.currentTime;
       oscillator.start(now);
-      oscillator.stop(now + .5);
-    }
-    ////window.setTimeout(oscillator.stop.bind(oscillator), this.state.duration);
+      oscillator.stop(now + .2);
+    }, 300);
   }
 
   update(state) {
@@ -45,7 +44,6 @@ class Synthesizer extends React.Component {
       duration: state.duration,
       ON: state.ON
     }, () => {
-      console.log(this.state)
     })
   }
 
@@ -53,7 +51,6 @@ class Synthesizer extends React.Component {
     this.setState({
       gain: state.gain
     }, () => {
-      console.log(this.state)
     })
   }
 

@@ -55,8 +55,8 @@ class Oscillator extends React.Component {
           <Fader
             label="Pitch"
             GridColumn={1}
-            min={250}
-            max={4000}
+            min={70}
+            max={2000}
             default={440}
             units="Hz"
             updateFrequency={this.updateFrequency}
