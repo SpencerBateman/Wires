@@ -12,7 +12,8 @@ class Synthesizer extends React.Component {
       waveform: WAVEFORMS.SINE.id,
       frequency : 440,
       duration : 100,
-      gain: 10
+      gain: 10,
+      ON: true
     }
     this.playSound = this.playSound.bind(this)
     this.update = this.update.bind(this)
@@ -21,22 +22,28 @@ class Synthesizer extends React.Component {
 
   componentDidMount() {
     window.audioContext = window.audioContext || new AudioContext();
+
   }
 
-  playSound() {
+  playSound(buffer, time) {
     let oscillator = audioContext.createOscillator();
     oscillator.type = this.state.waveform;
     oscillator.frequency.value = this.state.frequency;
     oscillator.connect(audioContext.destination);
-    oscillator.start();
-    window.setTimeout(oscillator.stop.bind(oscillator), this.state.duration);
+    let now = audioContext.currentTime;
+    if (this.state.ON) {
+      oscillator.start(now);
+      oscillator.stop(now + .5);
+    }
+    ////window.setTimeout(oscillator.stop.bind(oscillator), this.state.duration);
   }
 
   update(state) {
     this.setState({
       waveform: state.waveform,
       frequency: state.frequency,
-      duration: state.duration
+      duration: state.duration,
+      ON: state.ON
     }, () => {
       console.log(this.state)
     })
@@ -54,7 +61,7 @@ class Synthesizer extends React.Component {
     return(
     <div>
       <Layout>
-        <Oscillator update={this.update} />
+        <Oscillator ON={this.state.ON} update={this.update} />
         <Amp update={this.setGain}/>
       </Layout>
     <button onClick={this.playSound}>Play!</button>
