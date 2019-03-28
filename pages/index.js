@@ -1,15 +1,24 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { ThemeProvider } from 'styled-components';
 import { Reset } from 'styled-reset';
 
 import Synthesizer from './../components/Synthesizer/Synthesizer'
+
+// Global Theme
+const theme = {
+  AccentColor: "#1263e5",
+  AccentColorDeactivated: "#556277"
+};
+
 
 class Home extends React.Component {
   render() {
     return(
       <Container>
         <Reset />
-        <Synthesizer />
+        <ThemeProvider theme={theme}>
+          <Synthesizer />
+        </ThemeProvider>
       </Container>
     );
   }

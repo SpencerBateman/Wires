@@ -9,7 +9,6 @@ const GlobalStyle = createGlobalStyle`
 .rangeslider {
   margin: 20px 0;
   position: relative;
-  background: #54ea5e;
   -ms-touch-action: none;
   touch-action: none;
 
@@ -74,7 +73,7 @@ const GlobalStyle = createGlobalStyle`
 
   .rangeslider__fill {
     width: 100%;
-    background-color: #54ea5e;
+    background-color: ${props => props.theme.AccentColor};
     box-shadow: none;
     bottom: 0;
   }

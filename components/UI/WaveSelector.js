@@ -70,7 +70,7 @@ const ButtonContainer = styled.div`
  const WaveButton = styled.div`
   width: 80px;
   height: 80px;
-  background: ${props => props.selected ? '#54ea5e' : '#95a897'};
+  background: ${props => props.selected ? props.theme.AccentColor : props.theme.AccentColorDeactivated};
   font-family: 'Work Sans', sans-serif;
   color: white;
   text-align: center;

@@ -34,3 +34,7 @@ wires/
 ├── now.json
 └── package.json
 ```
+
+# Deployment
+Deploy in an instant with Now by running ```now``` in terminal.
+
