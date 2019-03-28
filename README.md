@@ -34,12 +34,36 @@ wires/
 ├── README.md
 └── yarn.lock
 ```
-### components/
+### components/Modules/
+#### Amp
+```
+┌───────────┐
+│    Amp    │
+├───────────┤
+│           │
+│           │
+│           │
+│           │
+└───────────┘
+```
+#### Oscillator
+```
+┌────────────┐
+│ Oscillator │
+├────────────┤
+│            │
+│            │
+│            │
+│            │
+└────────────┘
+```
+### components/Synthesizer/
+### components/UI/
 ### data/
 ### pages/
 ### next.config.js
 ### now.json
-### package.json/
+### package.json
 ### README.md
 ### yarn.lock
 
