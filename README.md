@@ -78,11 +78,10 @@ The Amp component uses the fader UI element
 ### data/
 #### config.json
 
-| Field    | Type    | Description  |
-| -------- |:-------------:| -----:|
-| title    | ```string```| The Title of the site |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
+| Field       | Type         | Description              |
+| ----------- | ------------ | -------------------------|
+| ```title``` | ```String``` | The Title of the lessons |
+| ```author```| ```String``` | The Name of the lessons author |
 
 ### pages/
 ### next.config.js
