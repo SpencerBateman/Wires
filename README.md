@@ -36,10 +36,15 @@ wires/
 ```
 ### components/Modules/
 #### Amp
+The Amp Module controls the volume of the signal that is passing through it. 
+The Amp allows attenuation to -infdB and max volume of 0dBs
+The Amp component uses the fader UI element
+
 ```
 ┌─────────────────────────┐
 │           Amp           │
 ├─────────────────────────┤
+│ active : Boolean        │
 │ gain : Integer          │
 │                         │
 ├─────────────────────────┤
@@ -52,18 +57,33 @@ wires/
 ```
 #### Oscillator
 ```
-┌────────────┐
-│ Oscillator │
-├────────────┤
-│            │
-│            │
-│            │
-│            │
-└────────────┘
+┌─────────────────────────┐
+│       Oscillator        │
+├─────────────────────────┤
+│ active : Boolean        │
+│ wave : ENUM             │
+│ frequency : Integer     │
+│                         │
+├─────────────────────────┤
+│ updateState()           │
+│                         │
+├─────────────────────────┤
+│ <Fader />               │
+│ <WaveSelector />        │
+│                         │
+└─────────────────────────┘
 ```
 ### components/Synthesizer/
 ### components/UI/
 ### data/
+#### config.json
+
+| Field    | Type    | Description  |
+| -------- |:-------------:| -----:|
+| title    | ```string```| The Title of the site |
+| col 2 is      | centered      |   $12 |
+| zebra stripes | are neat      |    $1 |
+
 ### pages/
 ### next.config.js
 ### now.json
