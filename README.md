@@ -34,8 +34,8 @@ wires/
 ├── README.md
 └── yarn.lock
 ```
-### components/Modules/
-#### Amp
+## components/Modules/
+### Amp
 The Amp Module controls the volume of the signal that is passing through it. 
 The Amp allows attenuation to -infdB and max volume of 0dBs
 The Amp component uses the fader UI element
@@ -55,7 +55,7 @@ The Amp component uses the fader UI element
 │                         │
 └─────────────────────────┘
 ```
-#### Oscillator
+### Oscillator
 ```
 ┌─────────────────────────┐
 │       Oscillator        │
@@ -73,22 +73,22 @@ The Amp component uses the fader UI element
 │                         │
 └─────────────────────────┘
 ```
-### components/Synthesizer/
-### components/UI/
-### data/
-#### config.json
+## components/Synthesizer/
+## components/UI/
+## data/
+### config.json
 
 | Field       | Type         | Description              |
 | ----------- | ------------ | -------------------------|
 | ```title``` | ```String``` | The Title of the lessons |
 | ```author```| ```String``` | The Name of the lessons author |
 
-### pages/
-### next.config.js
-### now.json
-### package.json
-### README.md
-### yarn.lock
+## pages/
+## next.config.js
+## now.json
+## package.json
+## README.md
+## yarn.lock
 
 # Modules
 * Occilator
