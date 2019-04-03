@@ -99,8 +99,10 @@ The Amp component uses the fader UI element
 #### Lesson Object Format
 | Field       | Type         | Description              |
 | ----------- | ------------ | -------------------------|
-| ```title``` | ```String``` | The Title of the lessons |
-| ```author```| ```String``` | The Name of the lessons author |
+| ```Title``` | ```String``` | The Title of the lessons |
+| ```Author```| ```String``` | The Name of the lessons author |
+| ```Version```| ```int``` | Version # of Lesson |
+| ```Module```| ```Array<int>``` | List of module id's for lesson |
 
 ### pages/
 ### next.config.js
