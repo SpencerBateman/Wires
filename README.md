@@ -24,7 +24,7 @@ wires/
 │       ├── OnSwitch
 │       └── WaveSelector
 ├── data/
-│   └── config.json
+│   └── Lesson1.js
 ├── pages/
 │   ├── index
 │   └── _document
@@ -96,8 +96,7 @@ The Amp component uses the fader UI element
 
 ### components/UI/
 ### data/
-#### config.json
-
+#### Lesson Object Format
 | Field       | Type         | Description              |
 | ----------- | ------------ | -------------------------|
 | ```title``` | ```String``` | The Title of the lessons |
