@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import WAVEFORMS from  './../Synthesizer/WAVEFORMS';
 import Oscillator from  './../Modules/Oscillator';
 import Amp from  './../Modules/Amp';
+import Lesson from '../../data/Lesson1';
 
 class Synthesizer extends React.Component {
   constructor(props) {
@@ -28,14 +29,18 @@ class Synthesizer extends React.Component {
   playSound(buffer, time) {
     window.setInterval(() => {
       let oscillator = audioContext.createOscillator();
+      let gain = audioContext.createGain();
       oscillator.type = this.state.waveform;
       oscillator.frequency.value = this.state.frequency;
-      oscillator.connect(audioContext.destination);
+      gain.gain.value = this.state.gain;
+      oscillator.connect(gain);
+      gain.connect(audioContext.destination);
       let now = audioContext.currentTime;
       oscillator.start(now);
       oscillator.stop(now + .2);
     }, 300);
   }
+
 
   update(state) {
     this.setState({
@@ -55,17 +60,32 @@ class Synthesizer extends React.Component {
   }
 
   render() {
-    return(
-    <div>
-      <Layout>
-        <Oscillator ON={this.state.ON} update={this.update} />
+    const Modules = Lesson['Module'].map((moduleId) => {
+      if (moduleId == 1) {
+        return(
+          <Oscillator ON={this.state.ON} update={this.update} />
+        );
+      }
+      if (moduleId == 2) {
+        return(
         <Amp update={this.setGain}/>
-      </Layout>
-    <button onClick={this.playSound}>Play!</button>
-  </div>
-  );
+        );
+      }
+    });
+    return(
+      <div>
+        <Layout>
+          <LessonTitle>{Lesson['Title']}</LessonTitle>
+          {Modules}
+        </Layout>
+        <button onClick={this.playSound}>Play!</button>
+      </div>
+    );
   }
 }
 const Layout = styled.div`
+`
+const LessonTitle = styled.h1`
+
 `
 export default Synthesizer;

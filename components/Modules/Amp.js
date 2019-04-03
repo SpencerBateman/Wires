@@ -28,8 +28,8 @@ class Amp extends React.Component {
           <SynthName>Fader 1.0</SynthName>
           <Fader
             label="Gain"
-            min={-20}
-            max={0}
+            min={0}
+            max={20}
             default={0}
             units="dB"
             updateFrequency={this.updateGain}

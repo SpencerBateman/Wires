@@ -74,6 +74,26 @@ The Amp component uses the fader UI element
 └─────────────────────────┘
 ```
 ### components/Synthesizer/
+#### Synthesizer
+```
+┌─────────────────────────┐
+│       Synthesizer       │
+├─────────────────────────┤
+│ active : Boolean        │
+│ wave : ENUM             │
+│ frequency : Integer     │
+│                         │
+├─────────────────────────┤
+│ updateState()           │
+│                         │
+├─────────────────────────┤
+│ <Fader />               │
+│ <WaveSelector />        │
+│                         │
+└─────────────────────────┘
+```
+#### WAVEFORMS
+
 ### components/UI/
 ### data/
 #### config.json
