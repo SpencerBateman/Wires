@@ -86,6 +86,7 @@ class Synthesizer extends React.Component {
 const Layout = styled.div`
 `
 const LessonTitle = styled.h1`
-
+  font-family: 'Work Sans',sans-serif;
+  font-size: 20px;
 `
 export default Synthesizer;

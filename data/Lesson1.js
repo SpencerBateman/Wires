@@ -1,5 +1,5 @@
 const Lesson1 = {
-  'Title': 'Oscilators',
+  'Title': 'Lesson 1 Oscilators',
   'Module': [1, 2]
 }
 
