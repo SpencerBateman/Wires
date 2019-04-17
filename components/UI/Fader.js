@@ -96,7 +96,6 @@ const GlobalStyle = createGlobalStyle`
     }
   }
 }
-
 `
 
 class Fader extends React.Component {

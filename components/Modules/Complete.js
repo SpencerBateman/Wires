@@ -1,31 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import Fader from './../UI/Fader';
-
-class Amp extends React.Component {
+class Complete extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      gain: 0
-    }
-    this.updateGain = this.updateGain.bind(this);
-  }
-
-  updateGain = (gain) => {
-    this.setState({
-      gain: gain
-    }, () => {
-      this.props.update(this.state)
-    })
   }
 
   render() {
     return(
       <div>
         <Frame>
-          <SynthName>Fader 1.0</SynthName>
-          <Fader label="Gain" min={0} max={20} default={0} units="dB" updateFrequency={this.updateGain} />
+          <SynthName>Complete!</SynthName>
         </Frame>
       </div>
     );
@@ -51,4 +36,4 @@ const Frame = styled.div`
   background: #fcfcfc;
 `
 
-export default Amp;
+export default Complete;

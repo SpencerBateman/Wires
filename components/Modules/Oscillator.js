@@ -15,8 +15,8 @@ class Oscillator extends React.Component {
       duration : 100,
       version: '1.1',
       ON: this.props.ON
-
     }
+
     this.handleChange = this.handleChange.bind(this)
     this.updateFrequency = this.updateFrequency.bind(this)
     this.handleOnOff = this.handleOnOff.bind(this)
@@ -25,20 +25,20 @@ class Oscillator extends React.Component {
   handleChange = (e) => {
     this.setState({
       waveform: e
-  }, () => {
-    this.props.update(this.state)
-  })
-  }
-
-  updateFrequency(e) {
-    this.setState({
-      frequency: e
-    }, () => {;
+    }, () => {
       this.props.update(this.state)
     })
-  }
+  };
 
-  handleOnOff(e) {
+  updateFrequency = (e) => {
+    this.setState({
+      frequency: e
+    }, () => {
+      this.props.update(this.state)
+    })
+  };
+
+  handleOnOff = (e) => {
     this.setState({
       ON: !this.state.ON
     }, () => {
@@ -72,22 +72,22 @@ class Oscillator extends React.Component {
 }
 
 const SynthName = styled.div`
-font-size: 20px;
-grid-row: 1;
-grid-column: 1;
-font-family: 'Work Sans',sans-serif;
-text-transform: Uppercase;
-    margin: 0 0 0 20px;
+  font-size: 20px;
+  grid-row: 1;
+  grid-column: 1;
+  font-family: 'Work Sans',sans-serif;
+  text-transform: Uppercase;
+  margin: 0 0 0 20px;
 `
 
 const Frame = styled.div`
-border-radius: 10px;
-border: 3px solid black;
-display: Grid;
-grid-template-columns: 300px 300px;
-grid-template-rows: 50px 250px;
-align-items: center;
-background: #fcfcfc;
+  border-radius: 10px;
+  border: 3px solid black;
+  display: Grid;
+  grid-template-columns: 300px 300px;
+  grid-template-rows: 50px 250px;
+  align-items: center;
+  background: #fcfcfc;
 `
 
 export default Oscillator;
