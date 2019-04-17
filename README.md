@@ -1,13 +1,17 @@
 # Wires 🎛 
 Wires is a project that explores digital signal processing in the browser.
+Wires uses the Web Audio API to create a digital signal processing environment.
+Wires also provies a loose javascript object as Content Management System, allowing for lessons to be contructed abstractly.
 
 # Project Architecure 🏗
-There will be a central ```<Synthesizer />``` component that will govern 
-audio playback and connecting to the window, audio context etc.
+In order to support continuous playback, there is a central ```<Synthesizer />``` component that governs 
+connecting to the audio API, playing, pausing, and the general state of the synthesizer. 
+This object also holds the data model of the web synthesizer. Controls in the web applications forward commands to this object.
 
-Should Synthesizer take care of grid? Yes but it imports the manager perhanps.
-Synth needs to manage displaying direction of signal flow and order of modules.
+Here are usfull documents with more detail on this project.
+
 [Read the Usability Study Here](Markdown/Usability.md)
+
 [Read the Project Summary Here](Markdown/Summary.md)
 
 ## Directory Structure 🗃
