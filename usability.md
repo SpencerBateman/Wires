@@ -2,21 +2,15 @@
 
 This document is data recorded from a formative user study
 
-## Questions
-Question 1
-Age
+## Test Questions
 
-Question 2
-Do you play a musical instrument?
-
-Question 3
-Have you ever taken a music class?
-
-Question 4
-On a scale from 1 - 7 where 1 is no experience and 7 is professional experience how experienced are you with music and it’s terminology.
-
-Question 5
-Have you ever used a synthesizer before?
+| Question #  | Question       | 
+| ----------- | ------------ |
+| Question 1  | Age           |
+| Question 2  | Do you play a musical instrument|
+| Question 3  | Have you ever taken a music class|
+| Question 4  | On a scale from 1 - 7 where 1 is no experience and 7 is professional experience how experienced are you with music and it’s terminology.|
+| Question 5  | Gave you ever used a synthesizer before|
 
 ## Results
 
