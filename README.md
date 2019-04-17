@@ -1,6 +1,5 @@
-# Wires
+# Wires 🎚 🎛 🔰
 Wires is a project that explores digital signal processing in the browser.
-
 
 # Project Architecure
 There will be a central ```<Synthesizer />``` component that will govern 
